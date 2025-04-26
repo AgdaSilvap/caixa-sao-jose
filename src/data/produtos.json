@@ -46,5 +46,10 @@
     "nome": "Picolé",
     "preco": 2.0,
     "imagem": "/img/picole.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Água",
+    "preco": 3.0
   }
 ]
