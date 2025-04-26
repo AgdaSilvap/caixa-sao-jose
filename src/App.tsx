@@ -32,7 +32,7 @@ export const App = () => {
         <button
           type="button"
           onClick={handleFullscreen}
-          className="fixed top-4 right-4 p-2 bg-white rounded-lg shadow-md hover:bg-gray-100 transition duration-200 z-20"
+          className="hidden fixed top-4 right-4 p-2 bg-white rounded-lg shadow-md hover:bg-gray-100 transition duration-200 z-20"
         >
           <MaximizeIcon className="size-4" />
         </button>
