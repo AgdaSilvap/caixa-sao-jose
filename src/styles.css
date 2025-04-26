@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.4 0.028 261.692);
+  --color-orange-teal-1: oklch(0.4 0.0677 204.86);
+  --color-orange-teal-2: oklch(0.5 0.0847 195.85);
+  --color-orange-teal-3: oklch(0.75 0.1596 63.03);
+  --color-orange-teal-4: oklch(0.61 0.1858 40.92);
+  --color-orange-teal-5: oklch(0.93 0.0206 32.53);
+
+  --radius-lg: 1.6rem;
+  --font-cursive: cursive;
+}
