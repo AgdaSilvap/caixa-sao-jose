@@ -50,6 +50,7 @@
   {
     "id": 9,
     "nome": "Água",
-    "preco": 3.0
+    "preco": 3.0,
+    "imagem": "/img/agua.jpg"
   }
 ]
