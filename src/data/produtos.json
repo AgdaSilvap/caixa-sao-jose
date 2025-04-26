@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Almoço",
+    "preco": 15.0,
+    "imagem": "/img/almoco.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Refri litro",
+    "preco": 12.0,
+    "imagem": "/img/refri-2l.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Refri juninho",
+    "preco": 2.0,
+    "imagem": "/img/refri-juninho.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Angu",
+    "preco": 5.0,
+    "imagem": "/img/angu.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Cachorro quente",
+    "preco": 5.0,
+    "imagem": "/img/cachorro-quente.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Doces",
+    "preco": 5.0,
+    "imagem": "/img/doces.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Bolo",
+    "preco": 5.0,
+    "imagem": "/img/bolo.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Picolé",
+    "preco": 3.0,
+    "imagem": "/img/picole.jpg"
+  }
+]

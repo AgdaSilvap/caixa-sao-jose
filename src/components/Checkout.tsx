@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
-import { ResetCarrinho } from "./ResetCarrinho"
+import valoresRecebidosPossiveis from "../data/valoresRecebidos.json"
 import { useFormatador } from "../hooks/useFormatador"
-import { valoresRecebidosPossiveis } from "../dados"
+import { ResetCarrinho } from "./ResetCarrinho"
 
 type CheckoutProps = {
   total: number,

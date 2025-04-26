@@ -1,6 +1,6 @@
 import { CardProduto } from "./components/CardProduto";
 import { Checkout } from "./components/Checkout";
-import { produtos } from "./dados";
+import produtos from "./data/produtos.json";
 import { useCarrinho } from "./hooks/useCarrinho";
 
 export const App = () => {

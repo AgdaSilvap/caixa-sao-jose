@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { produtos } from "../dados"
+import produtos from "../data/produtos.json"
 import { ItemCarrinho } from "../types"
 
 export const useCarrinho = () => {
