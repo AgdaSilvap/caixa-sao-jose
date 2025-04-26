@@ -19,8 +19,8 @@ export const Checkout = ({ total, resetarCarrinho }: CheckoutProps) => {
   }, [valorPago, total])
 
   return (
-    <div className="sticky bottom-0 z-10 flex gap-2 justify-between bg-orange-teal-5 rounded-lg p-4">
-      <div className="flex flex-col pr-12 gap-2">
+    <div className="sticky bottom-0 z-10 flex flex-col md:flex-row gap-2 justify-between bg-orange-teal-5 rounded-lg p-4">
+      <div className="flex flex-col gap-2">
         <div className="flex gap-2">
           <div className="flex flex-col">
             <label htmlFor="valor" className="text-lg font-bold tracking-tighter">Valor recebido</label>
@@ -77,8 +77,8 @@ export const Checkout = ({ total, resetarCarrinho }: CheckoutProps) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-2 mt-auto items-end">
-        <dl className="text-right">
+      <div className="flex flex-col gap-2 mt-auto md:items-end">
+        <dl className="md:text-right">
           <dt className="tracking-tighter font-semibold">Total</dt>
           <dd className="font-bold text-3xl font-mono">
             {formatarPreco(total)}
