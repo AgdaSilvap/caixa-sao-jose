@@ -26,7 +26,7 @@ export const App = () => {
   }, [])
 
   return (
-    <div ref={ref} className={`container mx-auto flex flex-col justify-between gap-4 py-4 px-4 backdrop:bg-white ${isFullscreen ? 'overflow-y-scroll' : ''}`} >
+    <div ref={ref} className={`container mx-auto min-h-screen flex flex-col justify-between gap-4 py-4 px-4 backdrop:bg-white ${isFullscreen ? 'overflow-y-scroll' : ''}`} >
       <Header />
       {!isFullscreen && (
         <button
