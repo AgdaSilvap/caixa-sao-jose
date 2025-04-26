@@ -23,7 +23,7 @@ export const CardProduto = ({ quantidade, produto, onChangeQuantidade }: CardPro
   }
 
   return (
-    <div className="relative flex gap-2 items-center border-2 border-orange-teal-5 p-4 rounded-lg">
+    <div className="relative flex gap-2 items-center border-2 bg-white border-orange-teal-5 p-4 rounded-lg">
       <img onClick={incrementar} src={produto.imagem ?? "/img/produto.jpg"} alt={produto.nome} className="size-24 object-cover rounded-lg bg-white/50" />
       <div className="flex flex-col gap-1 pl-8">
         <strong className="text-xl tracking-tighter">{produto.nome}</strong>
