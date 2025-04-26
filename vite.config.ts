@@ -19,7 +19,7 @@ export default defineConfig({
         description: 'Caixa São José Operário',
         theme_color: '#348e8f',
         background_color: '#ffffff',
-        display: 'standalone',
+        display: 'fullscreen',
         lang: 'pt-BR',
         icons: [
           {
