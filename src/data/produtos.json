@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nome": "Almoço",
+    "nome": "Janta",
     "preco": 10.0,
     "imagem": "/img/almoco.jpg"
   },
