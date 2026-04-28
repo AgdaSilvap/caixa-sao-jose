@@ -2,8 +2,26 @@ import { useMemo, useState } from "react"
 import produtos from "../data/produtos.json"
 import { ItemCarrinho } from "../types"
 
+const STORAGE_KEY = "caixa_sao_jose_carrinho"
+
+const carregarCarrinho = (): ItemCarrinho[] => {
+  try {
+    const dados = sessionStorage.getItem(STORAGE_KEY)
+    if (!dados) return []
+    return JSON.parse(dados) as ItemCarrinho[]
+  } catch {
+    return []
+  }
+}
+
+const persistirCarrinho = (itens: ItemCarrinho[]) => {
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(itens))
+  } catch { }
+}
+
 export const useCarrinho = () => {
-  const [itens, setItens] = useState<ItemCarrinho[]>([])
+  const [itens, setItens] = useState<ItemCarrinho[]>(carregarCarrinho)
 
   const total = useMemo(() => {
     return itens.reduce((acc, { id, quantidade }) => {
@@ -14,13 +32,15 @@ export const useCarrinho = () => {
 
   const atualizarItem = (item: ItemCarrinho) => {
     const index = itens.findIndex((i) => i.id === item.id)
+    let itensAtualizados: ItemCarrinho[]
     if (index === -1) {
-      setItens((prev) => [...prev, item])
-      return
+      itensAtualizados = [...itens, item]
+    } else {
+      itensAtualizados = [...itens]
+      itensAtualizados[index] = item
     }
-    const itensAtualizados = [...itens]
-    itensAtualizados[index] = item
     setItens(itensAtualizados)
+    persistirCarrinho(itensAtualizados)
   }
 
   const getQuantidadeItem = (idProduto: string) => {
@@ -29,7 +49,12 @@ export const useCarrinho = () => {
     return item.quantidade
   }
 
-  const resetarCarrinho = () => setItens([])
+  const resetarCarrinho = () => {
+    setItens([])
+    try {
+      sessionStorage.removeItem(STORAGE_KEY)
+    } catch { }
+  }
 
   return {
     total,
