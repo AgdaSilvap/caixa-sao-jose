@@ -9,3 +9,12 @@ export type ItemCarrinho = {
   id: string,
   quantidade: number
 }
+
+export type FormaPagamento = 'PIX' | 'DINHEIRO' | 'CADERNETA'
+
+export type RegistroCompra = {
+  id: string,
+  momentoConclusao: string,
+  valorTotal: number,
+  formaPagamento: FormaPagamento
+}

@@ -1,14 +1,17 @@
+import { BarChart2Icon, ClockIcon } from "lucide-react"
 import { useMemo, useState } from "react"
 import valoresRecebidosPossiveis from "../data/valoresRecebidos.json"
 import { useFormatador } from "../hooks/useFormatador"
-import { ResetCarrinho } from "./ResetCarrinho"
+import { BotaoConcluir } from "./BotaoConcluir"
 
 type CheckoutProps = {
   total: number,
-  resetarCarrinho: () => void
+  onConcluir: () => void
+  onAbrirBalanco: () => void
+  onAbrirHistorico: () => void
 }
 
-export const Checkout = ({ total, resetarCarrinho }: CheckoutProps) => {
+export const Checkout = ({ total, onConcluir, onAbrirBalanco, onAbrirHistorico }: CheckoutProps) => {
   const [valorPago, setValorPago] = useState<number | null>(null)
   const { formatarPreco } = useFormatador()
 
@@ -84,13 +87,33 @@ export const Checkout = ({ total, resetarCarrinho }: CheckoutProps) => {
             {formatarPreco(total)}
           </dd>
         </dl>
-        <ResetCarrinho
-          onClick={() => {
-            resetarCarrinho()
-            setValorPago(0)
-          }}
-        />
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={onAbrirHistorico}
+            title="Ver histórico de compras"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 bg-orange-teal-2/20 hover:bg-orange-teal-2/40 text-orange-teal-1 rounded-lg transition"
+          >
+            <ClockIcon className="size-5" />
+          </button>
+          <button
+            type="button"
+            onClick={onAbrirBalanco}
+            title="Ver balanço de vendas"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 bg-orange-teal-2/20 hover:bg-orange-teal-2/40 text-orange-teal-1 rounded-lg transition"
+          >
+            <BarChart2Icon className="size-5" />
+          </button>
+          <BotaoConcluir
+            disabled={total === 0}
+            onClick={() => {
+              onConcluir()
+              setValorPago(0)
+            }}
+          />
+        </div>
       </div>
     </div>
   )
 }
+
