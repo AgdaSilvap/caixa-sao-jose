@@ -23,7 +23,7 @@ export const useCarrinho = () => {
     setItens(itensAtualizados)
   }
 
-  const getQuantidadeItem = (idProduto: number) => {
+  const getQuantidadeItem = (idProduto: string) => {
     const item = itens.find((i) => i.id === idProduto)
     if (!item) return 0
     return item.quantidade

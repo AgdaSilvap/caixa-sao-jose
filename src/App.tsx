@@ -10,6 +10,7 @@ export const App = () => {
   const ref = useRef<HTMLDivElement>(null)
   const { total, atualizarItem, getQuantidadeItem, resetarCarrinho } = useCarrinho()
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const produtosOrdenados = [...produtos].sort((a, b) => a.nome.localeCompare(b.nome))
 
   const handleFullscreen = () => {
     if (isFullscreen) {
@@ -38,7 +39,7 @@ export const App = () => {
         </button>
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {produtos.map((produto) => (
+        {produtosOrdenados.map((produto) => (
           <CardProduto
             key={produto.id}
             produto={produto}

@@ -1,11 +1,11 @@
 export type Produto = {
-  id: number,
+  id: string,
   nome: string,
   preco: number,
   imagem?: string
 }
 
 export type ItemCarrinho = {
-  id: number,
+  id: string,
   quantidade: number
 }

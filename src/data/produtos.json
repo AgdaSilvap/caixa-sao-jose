@@ -1,54 +1,48 @@
 [
   {
-    "id": 1,
-    "nome": "Janta",
+    "id": "813efdaf-ace8-4bed-bab7-2e8d823ce3d6",
+    "nome": "Almoço / Janta",
     "preco": 10.0,
     "imagem": "/img/almoco.jpg"
   },
   {
-    "id": 3,
-    "nome": "Refri litro",
-    "preco": 12.0,
-    "imagem": "/img/refri-2l.jpg"
-  },
-  {
-    "id": 4,
-    "nome": "Refri juninho",
-    "preco": 2.0,
-    "imagem": "/img/refri-juninho.jpg"
-  },
-  {
-    "id": 5,
-    "nome": "Polenta",
-    "preco": 5.0,
-    "imagem": "/img/angu.jpg"
-  },
-  {
-    "id": 6,
-    "nome": "Cachorro quente",
-    "preco": 5.0,
-    "imagem": "/img/cachorro-quente.jpg"
-  },
-  {
-    "id": 7,
+    "id": "90950a7e-870a-4c45-844e-bb0422e0e4e9",
     "nome": "Doces",
     "preco": 5.0,
     "imagem": "/img/doces.jpg"
   },
   {
-    "id": 2,
+    "id": "6e2dcece-5951-41c0-a448-507dd7ba8536",
+    "nome": "Cachorro quente",
+    "preco": 5.0,
+    "imagem": "/img/cachorro-quente.jpg"
+  },
+  {
+    "id": "eb73124f-7192-4008-9575-1a687ca409f2",
     "nome": "Bolo",
     "preco": 5.0,
     "imagem": "/img/bolo.jpg"
   },
   {
-    "id": 8,
-    "nome": "Picolé",
-    "preco": 2.0,
-    "imagem": "/img/picole.jpg"
+    "id": "64f4b968-4acc-4d1d-a87f-a7f62f4d8520",
+    "nome": "Refri copo",
+    "preco": 1.0,
+    "imagem": "/img/refri-copo.png"
   },
   {
-    "id": 9,
+    "id": "14327b97-fd66-46be-b1f9-22d111962b5b",
+    "nome": "Refri litro",
+    "preco": 15.0,
+    "imagem": "/img/refri-2l.jpg"
+  },
+  {
+    "id": "e15c9e48-c5f2-4d86-a145-720a3b433626",
+    "nome": "Água com gás",
+    "preco": 5.0,
+    "imagem": "/img/agua-com-gas.png"
+  },
+  {
+    "id": "b5459cc6-12a0-4d21-a375-2195eed4ed70",
     "nome": "Água",
     "preco": 3.0,
     "imagem": "/img/agua.jpg"
