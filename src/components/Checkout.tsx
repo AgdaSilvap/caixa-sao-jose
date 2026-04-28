@@ -1,4 +1,4 @@
-import { BarChart2Icon, ClockIcon } from "lucide-react"
+import { BarChart2Icon, ClockIcon, RotateCcw } from "lucide-react"
 import { useMemo, useState } from "react"
 import valoresRecebidosPossiveis from "../data/valoresRecebidos.json"
 import { useFormatador } from "../hooks/useFormatador"
@@ -9,9 +9,10 @@ type CheckoutProps = {
   onConcluir: () => void
   onAbrirBalanco: () => void
   onAbrirHistorico: () => void
+  onReset: () => void
 }
 
-export const Checkout = ({ total, onConcluir, onAbrirBalanco, onAbrirHistorico }: CheckoutProps) => {
+export const Checkout = ({ total, onConcluir, onAbrirBalanco, onAbrirHistorico, onReset }: CheckoutProps) => {
   const [valorPago, setValorPago] = useState<number | null>(null)
   const { formatarPreco } = useFormatador()
 
@@ -104,6 +105,17 @@ export const Checkout = ({ total, onConcluir, onAbrirBalanco, onAbrirHistorico }
           >
             <BarChart2Icon className="size-5" />
           </button>
+          <button
+            type="button"
+            onClick={onReset}
+            disabled={total === 0}
+            title="Limpar o carrinho"
+            className="flex items-center justify-center gap-1.5 px-3 py-2 bg-orange-teal-2/20 hover:bg-orange-teal-2/40 text-orange-teal-1 rounded-lg transition disabled:opacity-50"
+          >
+            <RotateCcw className="size-5" />
+          </button>
+          {/* Separador */}
+          <div className="block h-8 w-px bg-slate-300 mx-2" />
           <BotaoConcluir
             disabled={total === 0}
             onClick={() => {

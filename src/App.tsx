@@ -72,6 +72,7 @@ export const App = () => {
         onConcluir={() => setModalConclusaoAberto(true)}
         onAbrirBalanco={() => setBalancoAberto(true)}
         onAbrirHistorico={() => setHistoricoAberto(true)}
+        onReset={() => resetarCarrinho()}
       />
 
       {/* Modal de conclusão */}
