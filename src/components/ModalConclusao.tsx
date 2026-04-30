@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FormaPagamento } from "../types"
+import { FormaPagamento, formaPagamentoList } from "../types"
 import { useFormatador } from "../hooks/useFormatador"
 
 type ModalConclusaoProps = {
@@ -45,19 +45,19 @@ export const ModalConclusao = ({ total, onConfirmar, onCancelar }: ModalConclusa
 
           {/* Seleção de forma de pagamento */}
           <div className="flex flex-col gap-2">
-            {formasPagamento.map(({ tipo, icon }) => (
+            {formaPagamentoList.map(({ id, icone, nome }) => (
               <button
-                key={tipo}
+                key={id}
                 type="button"
-                onClick={() => setFormaSelecionada(tipo)}
+                onClick={() => setFormaSelecionada(id)}
                 className={[
                   "flex-1 py-4 rounded-xl border-2 font-bold text-lg tracking-tighter transition-all duration-200",
-                  formaSelecionada === tipo
+                  formaSelecionada === id
                     ? "border-orange-teal-4 bg-orange-teal-4 text-white scale-105 shadow-lg"
                     : "border-orange-teal-5 bg-orange-teal-5 text-orange-teal-1 hover:border-orange-teal-3",
                 ].join(" ")}
               >
-                {icon} {tipo}
+                {icone} {nome}
               </button>
             ))}
           </div>
