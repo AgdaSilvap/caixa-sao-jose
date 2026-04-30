@@ -12,12 +12,6 @@ export const ModalConclusao = ({ total, onConfirmar, onCancelar }: ModalConclusa
   const [formaSelecionada, setFormaSelecionada] = useState<FormaPagamento | null>(null)
   const { formatarPreco } = useFormatador()
 
-  const formasPagamento: { tipo: FormaPagamento, icon: string }[] = [
-    { tipo: "PIX", icon: "💳" },
-    { tipo: "DINHEIRO", icon: "💵" },
-    { tipo: "CADERNETA", icon: "📒" },
-  ]
-
   return (
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/40 backdrop-blur-sm"
